@@ -1,0 +1,7 @@
+numpy>=1.26
+pandas>=2.1
+scikit-learn>=1.4
+matplotlib>=3.8
+streamlit>=1.35
+openai>=1.40          # used only as the client for NVIDIA's OpenAI-compatible endpoint
+python-dotenv>=1.0

@@ -49,12 +49,12 @@ def render(res, analyst) -> None:
     kpi(kd, f"{m['fn']}", "missed fraud", "bad")
 
     ma, mb = st.columns(2)
-    kpi(ma, f"\\${m['fraud_prevented']:,.0f}", "fraud prevented", "good")
-    kpi(mb, f"\\${m['fraud_loss']:,.0f}", "fraud missed", "bad")
+    kpi(ma, f"${m['fraud_prevented']:,.0f}", "fraud prevented", "good")
+    kpi(mb, f"${m['fraud_loss']:,.0f}", "fraud missed", "bad")
 
     st.caption(f"F1 {m['f1']:.3f} \xb7 FPR {m['fpr']:.2%}")
 
-    pred = _predictions(res, model, cont)
+    pred = res.predictions(model, cont)
     st.markdown(
         '<div class="glass fade-up d3" style="padding:16px 18px 8px;">'
         '<div style="font-size:.75rem;font-weight:700;color:var(--muted);'

@@ -40,7 +40,7 @@ def render(res, analyst) -> None:
         f"per {n_test:,.0f} transactions"
     )
 
-    m = _evaluate(res, model, cont)
+    m = res.evaluate(model, cont)
 
     ka, kb, kc, kd = st.columns(4)
     kpi(ka, f"{m['recall']:.0%}", "recall", "good")

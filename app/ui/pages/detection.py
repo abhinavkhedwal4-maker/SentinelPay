@@ -14,16 +14,6 @@ def _show(fig) -> None:
     plt.close(fig)
 
 
-@st.cache_data(show_spinner=False)
-def _evaluate(res, model: str, contamination: float) -> dict:
-    return res.evaluate(model, contamination)
-
-
-@st.cache_data(show_spinner=False)
-def _predictions(res, model: str, contamination: float):
-    return res.predictions(model, contamination)
-
-
 def render(res, analyst) -> None:
     h, s = res.headline, res.split
 
